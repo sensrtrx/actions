@@ -32,6 +32,7 @@ const loadManifests = async (secretServiceAccountKey) => {
     owner: 'extenda',
     repo: 'hiiretail-transaction-engine',
     path: '.k8s/txengine',
+    ref: 'build/change-pvc',
   }).then((response) => response.data)
     .then((files) => files.sort((a, b) => a.name.localeCompare(b.name)))
     .then((files) => fetchFileContent(files));
