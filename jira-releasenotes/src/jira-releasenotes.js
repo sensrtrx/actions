@@ -58,8 +58,7 @@ const createReleaseNotes = async ({
   const client = new JiraClient({
     protocol,
     host,
-    username: process.env.JIRA_USERNAME,
-    password: process.env.JIRA_PASSWORD,
+    bearer: process.env.JIRA_API_TOEKN,
     apiVersion: '2',
     strictSSL: protocol === 'https',
   });
