@@ -42980,7 +42980,7 @@ const { checkEnv, run } = __webpack_require__(1898);
 const { createReleaseNotes } = __webpack_require__(52398);
 
 run(async () => {
-  checkEnv(['JIRA_USERNAME', 'JIRA_PASSWORD']);
+  checkEnv(['JIRA_API_TOKEN']);
 
   const protocol = core.getInput('jira-protocol', { required: true });
   const host = core.getInput('jira-host', { required: true });
